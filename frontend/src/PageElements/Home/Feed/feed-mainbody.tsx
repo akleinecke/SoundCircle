@@ -121,7 +121,7 @@ const FeedMainBody: React.FC<FeedMainBodyProps> = ({ newLocalPost, nearbyFilter 
 
 
     return (
-        <div className="p-5 space-y-5 text-white overflow-y-auto overscroll-none w-full max-h-[70vh]">
+        <div className="p-5 space-y-5 text-white overflow-y-auto overflow-hidden w-full max-h-[70vh]">
             {/* Render posts */}
             {data.length > 0 ? (
                 data.map(({ id, user_id, username, post_content, created_at, comments, reactions }, index) => (
