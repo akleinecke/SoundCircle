@@ -11,6 +11,7 @@ import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import { RegisterRoutes } from '../build/routes';
 import { findUserByEmail } from './Models/Users/user.model';
+import jwtRoutes from './Cookies/jwtTokenAuthRoutes';
 
 import 'express-session';
 
@@ -65,6 +66,8 @@ app.use(
     origin: 'http://localhost:3000',
   })
 );
+// jwt cookies
+app.use(jwtRoutes);
 
 // Passport Google Strategy setup
 passport.use(

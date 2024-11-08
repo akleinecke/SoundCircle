@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../Redux_Store/actions";
 import Cookies from "js-cookie";
 import { selectUserID } from "../Redux_Store/selector";
+import UserProfileButton from "../Components/Universal/UserProfileButton";
 
 const Home = () => {
     // This bit of logic is for checking if we have a user ID in our Redux store
@@ -67,7 +68,12 @@ const Home = () => {
                 <div className="bg-gray-900 w-3/4 flex flex-grow">
                     {/*Left Column Section*/}
                     <ul className="w-full p-5 items-center text-center">
-                        <FriendRecs />
+                        <FriendRecs/>
+                        <UserProfileButton 
+                            user_id={0}
+                            className_image="w-20 h-20 rounded-full"
+                            className_text="text-sm text-gray-300 font-medium"
+                        />
                     </ul>
                 </div>
 
