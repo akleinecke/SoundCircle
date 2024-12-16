@@ -43,12 +43,12 @@ const UserPage = () => {
     };
 
     return (
-        <div className="min-h-[1375px] w-[1450px] flex flex-col bg-gray-900">
+        <div className="min-h-screen w-full flex flex-col bg-gray-900">
             {/* Main Page Container */}
             <Header />
             
             {/* Navigation Bar */}
-            <nav className=" bg-gray-900 z-5 flex justify-center top-[80px] relative">
+            <nav className="bg-gray-900 z-5 flex justify-center top-[80px] relative">
                 {["Taste", "Post", "Likes","Following","Reviews","About Me"].map((tab) => (
                     <button
                         key={tab}
@@ -60,7 +60,7 @@ const UserPage = () => {
                 ))}
             </nav>
             
-                <div className="bg-white-900 absolute fixed">
+                <div className="bg-white-900 absolute">
                     <div className="absolute bg-white">
                         {/*User Information Tab*/}
                         <div className="relative top-[100px] left-[1150px] bg-gray-700 w-[300px] p-4 shadow-lg z-10">
